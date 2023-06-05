@@ -26,11 +26,11 @@
 ## CSS
 Cascading Style Sheet
 串接樣式表
-### 選取氣 Selector
+### 選取器 Selector
 - 標籤tag
-- 類別class
-- id
-```css=
+- 類別class（可重複使用）
+- id（只可使用一次）
+```css
 /* 標籤 */
 h1 {
     color:red;
