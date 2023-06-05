@@ -22,3 +22,27 @@
 [Unsplash](https://unsplash.com/)
 
 [Lorem Picsum](https://picsum.photos/)
+
+## CSS
+Cascading Style Sheet
+串接樣式表
+### 選取氣 Selector
+- 標籤tag
+- 類別class
+- id
+```css=
+/* 標籤 */
+h1 {
+    color:red;
+}
+
+/* 類別class */
+.abc {
+    color:blue;
+}
+
+/* id */
+#xyz {
+    color:greenyellow;
+}
+```
