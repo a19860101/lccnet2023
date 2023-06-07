@@ -23,6 +23,8 @@
 
 [Lorem Picsum](https://picsum.photos/)
 
+[Coolors](https://coolors.co/)
+
 ## CSS
 Cascading Style Sheet
 串接樣式表
