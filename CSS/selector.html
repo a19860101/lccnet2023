@@ -12,9 +12,13 @@
         .abc {
             color: pink;
         }
+        .def {
+            color: blue;
+        }
         #xyz {
             color: greenyellow;
         }
+
     </style>
 </head>
 <body>
@@ -23,13 +27,17 @@
         1. tag 標籤
         2. class 類別 （可重複使用）
         3. id (只可使用一次)
+
+        css權重
+        影響元素愈少，權重愈重，愈優先套用
+        嵌入是樣式 > id > class > tag
      -->
      <h1 class="abc">title</h1>
      <ul>
+        <li class="abc" id="xyz" style="color:red;">list</li>
         <li>list</li>
         <li>list</li>
-        <li>list</li>
-        <li>list</li>
+        <li class="abc def">list</li>
      </ul>
      <p id="xyz">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic unde repudiandae eius error eligendi expedita necessitatibus, vel iste, beatae doloribus labore! Tempore consequatur dicta deserunt voluptas, placeat accusantium totam asperiores?
