@@ -9,10 +9,10 @@
         table {
             width: 600px;
             height: 400px;
-            /* border-collapse: collapse; */
+            border-collapse: collapse;
 
             /* border: 1px red solid; */
-            border-spacing: 10px;
+            /* border-spacing: 10px; */
         }
         /* td {
             border: 1px blue solid;
@@ -26,6 +26,26 @@
             background-color: #ccc;
             
         }
+        th {
+            background-color: #f5aeae;
+        }
+        /* 虛擬類別 */
+        /* 後代選取 */
+        tr:nth-of-type(odd) td{
+            background-color: #95fefb;
+        }
+        tr:nth-of-type(even) td{
+            background-color: #65c4c1;
+        }
+        /* 
+            a b {}
+            a裡面的b
+
+        */
+        .box h1 {
+            color: #fa0;
+        }
+
     </style>
 </head>
 <body>
@@ -48,6 +68,34 @@
             <td>content</td>
             <td>content</td>
         </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
     </table>
+    <div class="box">
+        <h1>title</h1>
+        <h1>title 2</h1>
+    </div>
 </body>
 </html>
