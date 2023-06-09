@@ -47,4 +47,21 @@ h1 {
 #xyz {
     color:greenyellow;
 }
+
+/* 群組選取器 */
+h1,h2,h3 { }
+/* h1、h2與h3同時影響 */
+
+/* 後代選取器 */
+.box h1 {}
+/* .box內的h1受到影響 */
+
+/* 虛擬類別 */
+/* nth-of-type() */
+li:nth-of-type(1){}
+/* 同階層內的第一個li */
+li:nth-of-type(odd){}
+/* 同階層內的奇數li */
+li:nth-of-type(even){}
+/* 同階層內的偶數li */
 ```
