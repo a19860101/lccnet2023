@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            height: 600px;
+            background-color: #ccc;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            /* 
+                start, center, end
+                space-around, space-between, space-evenly
+            */
+            align-items: center;
+            /* 
+                start, center, end
+                stretch, baseline
+            */
+        }
+        .box {
+            width: calc(100% / 5);
+            padding: 15px;
+        }
+        .box:nth-of-type(1){background-color: #098;}
+        .box:nth-of-type(2){background-color: #fa0;}
+        .box:nth-of-type(3){background-color: #526;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui praesentium neque modi veritatis in animi!
+            </p>
+        </div>
+        <div class="box">
+            <h1>title</h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui praesentium neque modi veritatis in animi!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui praesentium neque modi veritatis in animi!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui praesentium neque modi veritatis in animi!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui praesentium neque modi veritatis in animi!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui praesentium neque modi veritatis in animi!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
