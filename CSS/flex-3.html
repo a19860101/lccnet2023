@@ -14,7 +14,7 @@
         }
         .box {
             /* width: 200px; */
-            height: 200px;
+            /* height: 200px; */
 
             /* flex-basis:500px; */
             /* flex-grow: 1; */
@@ -27,28 +27,34 @@
             background-color: #098;
             /* flex-grow:4; */
             /* flex-shrink: 1; */
+            order: 3
         }
         .box:nth-of-type(2){
             background-color: #fa0;
             /* flex-grow: 1; */
             /* flex-shrink: 5; */
+            order: 1;
         }
         .box:nth-of-type(3){
             background-color: #526;
             /* flex-grow: 3; */
             /* flex-shrink: 2; */
+            order:2;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="box">
+            <h1>title 1</h1>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, atque voluptatum velit, perferendis reprehenderit accusantium a consectetur tempore placeat, neque illo commodi tenetur. Voluptate esse voluptas aliquid laboriosam quibusdam perferendis?
         </div>
         <div class="box">
+            <h1>title 2</h1>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis recusandae, accusamus eaque illum et ab error minus excepturi animi quis eius similique amet consequatur reiciendis tempora officia unde veniam!
         </div>
         <div class="box">
+            <h1>title 3</h1>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime consectetur exercitationem quidem repellat inventore minima ratione, molestiae corporis magni sequi voluptatum in sapiente veritatis quia culpa, repudiandae labore vero!
         </div>
     </div>
