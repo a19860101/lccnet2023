@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: #ccc;
+            width: 1000px;
+            display: flex;
+            flex-direction: column;
+        }
+        .box {
+            /* width: 200px; */
+            height: 200px;
+
+            flex-basis:calc(100% / 3);
+            /* flex-grow: ; */
+            /* flex-shrink: ; */
+        }
+        .box:nth-of-type(1){background-color: #098;}
+        .box:nth-of-type(2){background-color: #fa0;}
+        .box:nth-of-type(3){background-color: #526;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, atque voluptatum velit, perferendis reprehenderit accusantium a consectetur tempore placeat, neque illo commodi tenetur. Voluptate esse voluptas aliquid laboriosam quibusdam perferendis?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis recusandae, accusamus eaque illum et ab error minus excepturi animi quis eius similique amet consequatur reiciendis tempora officia unde veniam!
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime consectetur exercitationem quidem repellat inventore minima ratione, molestiae corporis magni sequi voluptatum in sapiente veritatis quia culpa, repudiandae labore vero!
+        </div>
+    </div>
+</body>
+</html>
