@@ -15,6 +15,12 @@
             display: block;
             /* vertical-align: top; */
         }
+        .container {
+            width: 1000px;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
         nav {
             width: 100%;
             background-color: #000;
@@ -24,7 +30,7 @@
             text-decoration: none;
             padding-inline:15px;
         }
-        .container {
+        .nav-container {
             width: 1000px;
             margin-inline: auto;
             display: flex;
@@ -50,11 +56,18 @@
             height: 100%;
             object-fit: cover;
         }
+        #premium .col {
+
+            
+        }
+        .premium-col {
+            flex: 0 0 calc(100% / 4);
+        }
     </style>
 </head>
 <body>
     <nav>
-        <div class="container">
+        <div class="nav-container">
             <a href="#" class="nav-logo">LOGO</a>
             <div class="nav-menu">
                 <a href="#" class="nav-link">Link</a>
@@ -67,5 +80,26 @@
     <header>
         <img src="https://picsum.photos/id/34/1200/800" alt="">
     </header>
+    <section id="premium">
+        <h2 class="section-title">升級 Premium 有什麼好處？</h2>
+        <div class="container">
+            <div class="premium-col">
+                <h3>下載音樂</h3>
+                <p>隨時隨地聆聽。</p>
+            </div>
+            <div class="premium-col">
+                <h3>下載音樂</h3>
+                <p>隨時隨地聆聽。</p>
+            </div>
+            <div class="premium-col">
+                <h3>下載音樂</h3>
+                <p>隨時隨地聆聽。</p>
+            </div>
+            <div class="premium-col">
+                <h3>下載音樂</h3>
+                <p>隨時隨地聆聽。</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
