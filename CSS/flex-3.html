@@ -9,19 +9,35 @@
             background-color: #ccc;
             width: 1000px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
         .box {
             /* width: 200px; */
             height: 200px;
 
-            flex-basis:calc(100% / 3);
-            /* flex-grow: ; */
-            /* flex-shrink: ; */
+            /* flex-basis:500px; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 0 ; */
+
+            flex: 1 0 300px;
+            /* grow shrink basis */
         }
-        .box:nth-of-type(1){background-color: #098;}
-        .box:nth-of-type(2){background-color: #fa0;}
-        .box:nth-of-type(3){background-color: #526;}
+        .box:nth-of-type(1){
+            background-color: #098;
+            /* flex-grow:4; */
+            /* flex-shrink: 1; */
+        }
+        .box:nth-of-type(2){
+            background-color: #fa0;
+            /* flex-grow: 1; */
+            /* flex-shrink: 5; */
+        }
+        .box:nth-of-type(3){
+            background-color: #526;
+            /* flex-grow: 3; */
+            /* flex-shrink: 2; */
+        }
     </style>
 </head>
 <body>
