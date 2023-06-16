@@ -81,6 +81,23 @@
         #premium i {
             font-size: 8rem;
         }
+
+        .section-title small {
+            font-size: 16px;
+            font-weight: normal;
+            display: block;
+        }
+        .plan-col {
+            flex:0 0 calc(100% / 4);
+            padding:10px;
+        }
+        .plan-card {
+            border: 1px solid #999;
+            padding:12px;
+        }
+        .plan-list {
+            list-style-position: inside;
+        }
     </style>
 </head>
 <body>
@@ -124,8 +141,10 @@
         </div>
     </section>
     <section id="plan">
-        <h2 class="section-title">選擇適合自己的 Premium 方案</h2>
-        <p>在你的手機、揚聲器和其他裝置上盡情收聽，完全不受限。</p>
+        <h2 class="section-title">
+            選擇適合自己的 Premium 方案
+            <small>在你的手機、揚聲器和其他裝置上盡情收聽，完全不受限。</small>
+        </h2>
         <div class="container">
             <div class="plan-col">
                 <div class="plan-card">
@@ -134,13 +153,15 @@
                         <div>NT</div>
                         <div>1個帳戶</div>
                     </div>
-                    <ul>
-                        <li>無廣告唱聽音樂</li>
-                        <li>無廣告唱聽音樂</li>
-                        <li>無廣告唱聽音樂</li>
+                    <ul class="plan-list">
+                        <li class="plan-item">無廣告唱聽音樂</li>
+                        <li class="plan-item">無廣告唱聽音樂</li>
+                        <li class="plan-item">無廣告唱聽音樂</li>
                     </ul>
                     <a href="#">開始使用</a>
-                    <small><u>適用相關條款及細則。</u></small>
+                    <div>
+                        <small><u>適用相關條款及細則。</u></small>
+                    </div>
                 </div>
             </div>
         </div>
