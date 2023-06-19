@@ -55,6 +55,31 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover; */
+
+            position: relative;
+        }
+        .header-content {
+            background-color: #0000006e;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            /* right: 400px; */
+            /* inset: 0; */
+            margin: auto;
+
+            width: 500px;
+            height: fit-content;
+            /* min-content, max-content, fit-content */
+
+
+            margin-left: 100px;
+            padding: 50px;
+            color: #fff;
+
+            backdrop-filter: blur(3px);
+            border-radius: 15px;
+
         }
         header img {
             width: 100%;
@@ -221,6 +246,15 @@
     </nav>
     <header>
         <img src="https://picsum.photos/id/34/1200/800" alt="">
+        <div class="header-content">
+            <h2>入手 Premium，免費試用 1 個月</h2>
+            <div>之後每月只需 NT$149.00。可隨時取消。</div>
+            <div>
+                <a href="#">開始使用</a>
+                <a href="#">查看方案</a>
+            </div>
+            <small>適用相關條款及細則。已試用 Premium 的使用者不適用 1 個月的免費優惠。</small>
+        </div>
     </header>
     <section id="premium">
         <h2 class="section-title">升級Premium有什麼好處？</h2>
