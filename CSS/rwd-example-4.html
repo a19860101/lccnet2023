@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            width: 100%;
+            background-color: #222;
+            height: fit-content;
+            display: flex;
+            /* align-items: center; */
+
+            flex-direction:  column;
+        }
+        .nav-menu {
+            display: flex;
+            /* margin-left: auto; */
+
+            flex-direction: column;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding-inline:10px;
+
+            padding-block: 15px;
+        }
+        @media (min-width: 1200px){
+            nav {
+                /* width: 100%; */
+                /* background-color: #222; */
+                height: 60px;
+                /* display: flex; */
+                align-items: center;
+
+                flex-direction: row;
+            }
+            .nav-menu {
+                /* display: flex; */
+                margin-left: auto;
+
+                flex-direction: row;
+            }
+            nav a {
+                /* color: #fff; */
+                /* text-decoration: none; */
+                /* padding-inline:10px; */
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">logo</a>
+        <div class="nav-menu">
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+        </div>
+    </nav>
+</body>
+</html>
