@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width:1200px;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col {
+            flex: 1 1 401px;
+            padding: 15px;
+        }
+        .col:nth-of-type(3){
+            order: 2;
+        }
+        .col:nth-of-type(4){
+            order: 1;
+        }
+        img {
+            width: 100%;
+        }
+        @media(min-width:802px){
+            .col:nth-of-type(3){
+                order: 1;
+            }
+            .col:nth-of-type(4){
+                order: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <img src="https://picsum.photos/id/92/800/600" alt="">
+        </div>
+        <div class="col">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum maxime aliquam laborum id. Delectus repellendus quis eius aliquam ipsum sequi incidunt nihil aspernatur, voluptatem quidem ut, doloremque officiis dignissimos reiciendis.
+            </p>
+        </div>
+       
+        <div class="col">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum maxime aliquam laborum id. Delectus repellendus quis eius aliquam ipsum sequi incidunt nihil aspernatur, voluptatem quidem ut, doloremque officiis dignissimos reiciendis.
+            </p>
+        </div>
+        <div class="col">
+            <img src="https://picsum.photos/id/28/800/600" alt="">
+        </div>
+    </div>
+</body>
+</html>
