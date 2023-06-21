@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* container query */
+        * {
+            margin: 0;  
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width:1200px;
+            margin-inline: auto;
+            background-color: #aaa;
+            padding: 50px;
+        }
+        .box {
+            max-width: 800px;
+
+            background-color: #9ce5ff;
+            padding: 15px;
+
+            container-name: box;
+            container-type: inline-size;
+
+        }
+
+        @container box (max-width: 600px){
+            .box h2 {
+                color: #f00;
+            }
+        }
+
+        
+        @media (min-width: 600px){
+            .container {
+                background-color: #098;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis iste voluptas iusto! Sunt, unde hic ipsam qui doloremque nulla quae perferendis laboriosam fugiat odit numquam nemo tempora aliquam dolores quo.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
