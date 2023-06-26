@@ -10,7 +10,20 @@
             height: 100px;
             background-color: #fa0;
 
-            animation: a2 2s;
+            /* animation: a2 2s 1s 2 forwards ease; */
+            /* animation-name: a2; */
+            /* animation-duration: 3s; */
+            /* animation-delay: 0s; */
+            /* animation-direction: normal; */
+            /* normal, reverse , alternate, alternate*/
+            /* animation-fill-mode: forwards; */
+            /* forwards, backwards */
+            /* animation-iteration-count: 1; */
+            /* animation-play-state: paused; */
+            /* animation-timing-function: ease; */
+        }
+        .box:hover {
+            animation: a3 3s forwards;
         }
         @keyframes a1 {
             from {opacity: 0;}
@@ -22,6 +35,12 @@
             50% {transform: translateX(400px)translateY(400px);}
             75% {transform: translateX(0px)translateY(400px);}
             100% {transform: translateX(100px)translateY(100px);}
+        }
+        @keyframes a3 {
+            to {
+                scale: .5;
+                rotate: 180deg;
+            }
         }
     </style>
 </head>
