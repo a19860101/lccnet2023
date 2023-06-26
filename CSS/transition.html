@@ -12,9 +12,13 @@
 
             /* transition:transform 1s; */
             transition-property: background-color,transform;
-            transition-duration: 1s;
+            transition-duration: 4s;
             transition-delay: 1s,0s;
-            /* transition-timing-function: ; */
+            transition-timing-function: cubic-bezier(.76,-0.96,.82,1.41);
+            /* 
+                ease, ease-in, ease-out, ease-in-out, linear
+            */
+            /* https://cubic-bezier.com/#.17,.67,.83,.67 */
         }
         .box:hover {
             background-color: #fa0;
