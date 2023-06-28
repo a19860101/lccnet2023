@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&family=Roboto:wght@100;300;400;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'roboto','noto sans tc',sans-serif;
+}
+img {
+    display: block;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+}
