@@ -1,3 +1,4 @@
 h1 {
-    background-color: #989;
+    background-color: var(--green);
+    color: var(--red);
 }

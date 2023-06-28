@@ -1,0 +1,23 @@
+:root {
+    --red:#db2e2e;
+    --green:#2dc869;
+    --blue:#259bbb;
+}
+.text-blue {
+    color: var(--blue);
+}
+.text-green {
+    color: var(--green);
+}
+.text-red {
+    color: var(--red);
+}
+.bg-blue {
+    background-color: var(--blue);
+}
+.bg-green {
+    background-color: var(--green);
+}
+.bg-red {
+    background-color: var(--red);
+}
