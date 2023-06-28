@@ -1,5 +1,9 @@
+:root {
+    --col-padding: 15px;
+    --max-container: 1200px;
+}
 .container {
-    max-width: 1200px;
+    max-width: var(--max-container);
     margin-inline: auto;
 }
 .row {
@@ -73,3 +77,12 @@
     .col-xl-11 {flex: 0 0 calc(100% / 12 * 11);}
     .col-xl-12 {flex: 0 0 calc(100% / 12 * 12);}
 }
+/* 屬性選取器 */
+[class^="col-"]{
+    padding:var(--col-padding);
+}
+/* 
+    ^= 開頭是 
+    *= 包含
+    $= 結尾是
+*/
