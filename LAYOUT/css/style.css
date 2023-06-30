@@ -3,10 +3,14 @@ header {
     /* height: 600px; */
     aspect-ratio: 16 / 9;
     /* clip-path: polygon(0 0,100% 0,100% 80%,50% 100%,0 80%); */
-    /* clip-path: polygon(0 0,100% 0,100% calc(100% - 15vw),0 100%); */
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 15vw),0 100%);
     /* clip-path: circle(); */
     position: relative;
     background-color: #fa0;
+    background-image: url('https://picsum.photos/id/98/1600/800');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* header img{
     width: 100%;
@@ -19,20 +23,26 @@ header img {
 }
 section {
     width: 100%;
-    height: calc(600px + 15vw);
+    /* height: calc(600px + 15vw); */
     /* background-color: var(--blue); */
 
     /* margin-top: -15vw; */
 }
 /* https://getwaves.io/ */
 /* course */
+#course {
+    background-color: #fff9b8;
+    padding-top: 300px;
+    padding-bottom: 150px;
+    margin-top: -15vw;
+}
 
 .course-card {
     display: flex;
     flex-direction: column;
     /* border: 1px solid #000; */
 
-    background-color: #d2d2d2;
+    background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
     transition:.6s;
