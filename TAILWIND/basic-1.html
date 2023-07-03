@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme:{
+                extend:{
+                    colors:{
+                        coffee: {
+                            100:'#944e1d',
+                            200:'#944888'
+                        },
+                        primary:'pink'
+                    }
+                },
+                screens: {
+                    'sm': '520px',
+
+                    'md': '768px',
+
+                    'xl': '1200px',
+                },
+            }
+        }
+    </script>
 </head>
 <body>
-    <nav class="flex py-5 bg-lime-400">
-        <a href="#" class="text-black px-2 hover:text-red-600 duration-500">logo</a>
+    <nav class="flex py-5 bg-primary">
+        <a href="#" class="text-coffee-200 px-2 hover:text-red-600 duration-500">logo</a>
         <div class="ml-auto">
             <a href="#" class="text-black px-2">link</a>
             <a href="#" class="text-black px-2">link</a>
