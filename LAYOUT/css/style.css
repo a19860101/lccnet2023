@@ -147,3 +147,21 @@ section {
 .people-nav a {
     color: #013e39;
 }
+/* footer */
+footer {
+    background-color: #003329;
+    display: flex;
+
+    /* height: 60px; */
+    align-items: baseline;
+    padding-block: 20px;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+    padding-inline:8px;
+}
+.footer-copyright {
+    margin-left: auto;
+    letter-spacing: 1px;
+}
