@@ -27,6 +27,14 @@
             }
         }
     </script>
+    <style type="text/tailwindcss">
+        .my-container {
+            @apply container flex flex-wrap mx-auto
+        }
+        .btn {
+            @apply inline-block px-6 py-2 bg-rose-500 text-white hover:bg-rose-800 duration-500 rounded-xl
+        }
+    </style>
 </head>
 <body>
     <div class="w-[100px] h-[100px] bg-[#098]">
@@ -42,30 +50,34 @@
             <a href="#" class="text-black px-2">link</a>
         </div>
     </nav>
-    <div class="container flex flex-wrap mx-auto">
+    <div class="my-container">
         <div class=" w-full sm:w-1/2 xl:w-1/4 xl:text-red-400 text-lime-400  p-4">
             <h2>title</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis incidunt tenetur eum, culpa eius alias quos quia pariatur, aperiam minima enim quasi illo officiis optio in dicta laudantium molestiae facere.
             </p>
+            <a href="#" class="btn">link</a>
         </div>
         <div class=" w-full sm:w-1/2 xl:w-1/4  p-4">
             <h2>title</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis incidunt tenetur eum, culpa eius alias quos quia pariatur, aperiam minima enim quasi illo officiis optio in dicta laudantium molestiae facere.
             </p>
+            <a href="#" class="btn">link</a>
         </div>
         <div class=" w-full sm:w-1/2 xl:w-1/4  p-4">
             <h2>title</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis incidunt tenetur eum, culpa eius alias quos quia pariatur, aperiam minima enim quasi illo officiis optio in dicta laudantium molestiae facere.
             </p>
+            <a href="#" class="btn">link</a>
         </div>
         <div class=" w-full sm:w-1/2 xl:w-1/4  p-4">
             <h2>title</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis incidunt tenetur eum, culpa eius alias quos quia pariatur, aperiam minima enim quasi illo officiis optio in dicta laudantium molestiae facere.
             </p>
+            <a href="#" class="btn">link</a>
         </div>
     </div>
 </body>
