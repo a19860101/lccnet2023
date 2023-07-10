@@ -86,6 +86,28 @@
             return data.name === '熟成紅茶';
         })
         console.log(drinks_every);
+
+        // reduce
+
+        // let num = [12,22,32,42];
+        // let total  = num.reduce(function(a,b){
+        //     return a + b;
+        // })
+
+        
+        // let price = drinks.map(function(data){
+        //     return data.price;
+        // })
+        // let total = price.reduce(function(a,b){
+        //     return a + b;
+        // })
+        let total = drinks.map(function(data){
+            return data.price
+        }).reduce(function(a,b){
+            return a + b;
+        })
+        console.log(total);
+
     </script>
 </body>
 </html>
