@@ -8,6 +8,7 @@
 <body>
     <script>
         //具名函式
+        // function declaration 函式宣告式
         function a(){
             let x = 10;
             let y = 15;
@@ -17,6 +18,7 @@
             return x*y;
         }
 
+        // function expression 函式表達式
         let test = (x,y)=>{
             return x + y;
         }
@@ -31,6 +33,17 @@
         console.log(test2('qqq'));
         //匿名函式
         // function(){}
+
+        
+        // function multiply(a,b){
+        //     return a * b;
+        // }
+        
+
+        let multiply = function(a,b){
+            return a*b;
+        }
+        console.log(multiply(11,12));
     </script>
 </body>
 </html>
