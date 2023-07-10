@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //具名函式
+        function a(){
+            let x = 10;
+            let y = 15;
+            return x*y;
+        }
+        function b(x,y){
+            return x*y;
+        }
+
+        let test = (x,y)=>{
+            return x + y;
+        }
+        console.log(test(100,24));
+
+
+        // 箭頭函式 arrow function
+        let test2 = (x)=>{
+            return 'hello'+x;
+        }
+        // 箭頭函式與一般函式差別在this的使用
+        console.log(test2('qqq'));
+        //匿名函式
+        // function(){}
+    </script>
+</body>
+</html>
