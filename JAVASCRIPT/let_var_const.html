@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let x = 10;
+        // if(x > 0){
+            // let msg = 'success';
+            // var msg = 'success';
+            // console.log(msg);
+        // }
+        // console.log(msg);
+        // let,const var之間的範疇(scope)不同
+        // let,const 是block scope,var 是function scope
+
+        function test(){
+            // let a = 'success2';
+            // var a = 'success2';
+        }
+        let x = 100;
+        x = 102;
+        
+        const y = 200;
+        // y = 202;
+        // 常數不允許重新賦值
+        console.log(y);
+
+
+        const q = ['apple','banana'];
+        q.push('dog');
+        // q = ['apple'];
+        console.log(q);
+
+        const o = {
+            name:'test',
+        }
+        o.mail = 'asdf@gmail.com'
+        console.log(o);
+    </script>
+</body>
+</html>
