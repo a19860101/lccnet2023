@@ -63,6 +63,18 @@
         console.log(drinks_new);
         // let str = 'hello';
         // console.log(str.indexOf('z'));
+
+        // find
+        let drinks_find = drinks.find(function(data){
+            return data.name.indexOf('春芽') > -1;
+        })
+        console.log(drinks_find)
+
+        // findIndex
+        let drinks_findIndex = drinks.findIndex(function(data){
+            return data.name.indexOf('春芽') > -1;
+        })
+        console.log(drinks_findIndex);
     </script>
 </body>
 </html>
