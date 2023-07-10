@@ -45,6 +45,24 @@
             return data.name;
         })
         console.log(drinks_map);
+
+        // filter
+        let drinks_expensive = drinks.filter(function(data){
+            return data.price > 40;
+        })
+        console.log(drinks_expensive);
+
+        let drinks_tea = drinks.filter(function(data){
+            return data.name.indexOf('春芽') > -1;
+        })
+        console.log(drinks_tea);
+
+        let drinks_new = drinks.filter(function(data){
+            return data.name != '春芽綠茶';
+        })
+        console.log(drinks_new);
+        // let str = 'hello';
+        // console.log(str.indexOf('z'));
     </script>
 </body>
 </html>
