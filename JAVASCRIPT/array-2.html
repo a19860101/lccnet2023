@@ -6,6 +6,45 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // let drinks = ['熟成紅茶','熟成歐蕾','春芽綠茶','春芽冷露'];
+        let drinks = [
+            {
+                id:1,
+                name:'熟成紅茶',
+                price: 30
+            },
+            {
+                id:2,
+                name:'熟成歐蕾',
+                price: 50
+            },
+            {
+                id:3,
+                name:'春芽綠茶',
+                price: 30
+            },
+            {
+                id:4,
+                name:'春芽冷露',
+                price: 45
+            },
+        ];
+        // for(let drink of drinks){
+        //     console.log(drink.name);
+        // }
+
+        // forEach
+        // drinks.forEach(function(data,idx){
+        //     console.log(data.name);
+        //     console.log(idx);
+        // })
+
+        // map
+        let drinks_map = drinks.map(function(data){
+            return data.name;
+        })
+        console.log(drinks_map);
+    </script>
 </body>
 </html>
