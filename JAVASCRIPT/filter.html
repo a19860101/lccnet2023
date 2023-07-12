@@ -27,7 +27,7 @@
 
         input.onkeyup = function(){
             for(let item  of li){
-                if(item.textContent.indexOf(input.value) > -1){
+                if(item.textContent.toUpperCase().indexOf(input.value.toUpperCase()) > -1){
                     // item.style.display = '';
                     // item.style.color = 'blue'
                     item.classList.remove('del');
