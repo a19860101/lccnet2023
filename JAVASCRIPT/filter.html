@@ -25,7 +25,7 @@
         let input = document.querySelector('input');
         let li = document.querySelectorAll('li');
 
-        input.onkeyup = function(){
+        input.onkeyup = (e,idx) => {
             for(let item  of li){
                 if(item.textContent.toUpperCase().indexOf(input.value.toUpperCase()) > -1){
                     // item.style.display = '';

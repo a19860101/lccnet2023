@@ -30,13 +30,13 @@
         let add = document.querySelector('.add');
         let remove = document.querySelector('.remove');
         let toggle = document.querySelector('.toggle');
-        add.onclick = function(){
+        add.onclick = ()=>{
             document.querySelector('h1').classList.add('active');
         }
-        remove.onclick = function(){
+        remove.onclick = ()=>{
             document.querySelector('h1').classList.remove('active');
         }
-        toggle.onclick = function(){
+        toggle.onclick = ()=>{
             document.querySelector('h1').classList.toggle('active');
         }
 
