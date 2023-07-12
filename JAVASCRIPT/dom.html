@@ -21,13 +21,29 @@
     <a href="#" class="link">link3</a>
     <script>
         // let h1 = document.getElementsByTagName('h1');
-        // let link = document.getElementsByClassName('link');
+        // let link = [...document.getElementsByClassName('link')];
+        let link = Array.from(document.getElementsByClassName('link'));
         // let title = document.getElementById('title');
 
-        let h1 = document.querySelector('h1');
-        let link = document.querySelectorAll('.link');
-        let title = document.querySelector('#title');
-        console.log(link);
+        // let h1 = document.querySelector('h1');
+        // let link = document.querySelectorAll('.link');
+        // let title = document.querySelector('#title');
+
+        // for(let data of link){
+        //     console.log(data);
+        // }
+        // let linkArray = Array.from(link);
+        // let linkArray = [...link]; 
+        // console.log(linkArray)
+        link.map(function(data){
+            console.log(data)
+        })
+
+        const a = ['apple','banana'];
+        const b = ['cat','dog'];
+        const result = [...a,...b];
+        // const result = [a,b];
+        console.log(result);
     </script>
 </body>
 </html>
