@@ -9,16 +9,17 @@
             transition: all 300ms;
         }
         .active {
-            font-size: 30px;
             color: #098;
             background-color: #f0a;
+            padding:30px;
         }
     </style>
 </head>
 <body>
     <h1>TITLE</h1>
-    <button class="add">add</button>
+    <button class="add btn">add</button>
     <button class="remove">remove</button>
+    <button class="toggle">toggle</button>
     <script>
         // let h1 = document.querySelector('h1');
         // h1.style.color = '#098';
@@ -28,12 +29,19 @@
         // h1.classList.remove('active');
         let add = document.querySelector('.add');
         let remove = document.querySelector('.remove');
+        let toggle = document.querySelector('.toggle');
         add.onclick = function(){
             document.querySelector('h1').classList.add('active');
         }
         remove.onclick = function(){
             document.querySelector('h1').classList.remove('active');
         }
+        toggle.onclick = function(){
+            document.querySelector('h1').classList.toggle('active');
+        }
+
+        console.log([...add.classList]);
+        // console.log(add.className);
     </script>
 </body>
 </html>
