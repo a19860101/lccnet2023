@@ -21,7 +21,11 @@
             text-decoration: none;
             color: #fff;
 
-            border-bottom: 2px solid #003630
+            border-bottom: 2px solid #003630;
+            transition: all 300ms;
+        }
+        .collapse-btn.active {
+            background-color: #f79b32;
         }
         .collapse-panel {
             padding-inline: 15px;
@@ -30,19 +34,19 @@
 
             height:0;
             overflow: hidden;
-
+            transition: all 600ms;
             /* box-sizing: content-box; */
         }
-        .collapse-panel.active {
+        /* .collapse-panel.active {
             height: fit-content;
             padding-block: 15px;
-        }
+        } */
     </style>
 </head>
 <body>
     <div class="collapse">
         <a href="#" class="collapse-btn">Link 1</a>
-        <div class="collapse-panel active">
+        <div class="collapse-panel">
             <h3>title 1</h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nisi accusamus quasi exercitationem ipsa alias! Optio vitae debitis suscipit, fugiat quae eligendi explicabo et, repellat ducimus, voluptatum cupiditate doloribus iste!
@@ -66,5 +70,19 @@
             </p>
         </div>
     </div>
+    <script>
+        let btns = document.querySelectorAll('.collapse-btn');
+        for(let btn of btns){
+            btn.onclick = e => {
+                e.target.classList.toggle('active');
+                let panel = e.target.nextElementSibling;
+                if(panel.style.height){
+                    panel.style.height = null;
+                }else{
+                    panel.style.height = panel.scrollHeight + 'px';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
