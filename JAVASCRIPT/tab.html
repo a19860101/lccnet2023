@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .tabs {
+            width: 600px;
+            margin-inline: auto;
+            position: relative;
+        }
+        .tab-nav {
+            display: flex;
+            background-color: #222;
+        }
+        .tab-link {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px;
+        }
+        .tab-link.active {
+            background-color: #ccc;
+            color: #000;
+        }
+        .tab-panel {
+            position: absolute;
+            padding: 15px;
+            background-color: #ccc;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab-nav">
+            <a href="#" class="tab-link active">Panel A</a>
+            <a href="#" class="tab-link">Panel B</a>
+            <a href="#" class="tab-link">Panel C</a>
+        </div>
+        <div class="tab-panel active" id="panel-a">
+            <h3>title A</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae fugit reiciendis, libero commodi iusto illo eum incidunt voluptates autem doloremque nesciunt hic aliquid sequi itaque quae quis, illum cumque.
+            </p>
+        </div>
+        <div class="tab-panel" id="panel-b">
+            <h3>title B</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae fugit reiciendis, libero commodi iusto illo eum incidunt voluptates autem doloremque nesciunt hic aliquid sequi itaque quae quis, illum cumque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae fugit reiciendis, libero commodi iusto illo eum incidunt voluptates autem doloremque nesciunt hic aliquid sequi itaque quae quis, illum cumque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae fugit reiciendis, libero commodi iusto illo eum incidunt voluptates autem doloremque nesciunt hic aliquid sequi itaque quae quis, illum cumque.
+            </p>
+        </div>
+        <div class="tab-panel" id="panel-c">
+            <h3>title C</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae fugit reiciendis, libero commodi iusto illo eum incidunt voluptates autem doloremque nesciunt hic aliquid sequi itaque quae quis, illum cumque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae fugit reiciendis, libero commodi iusto illo eum incidunt voluptates autem doloremque nesciunt hic aliquid sequi itaque quae quis, illum cumque.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
