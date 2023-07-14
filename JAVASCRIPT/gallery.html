@@ -17,6 +17,10 @@
         .thumb {
             width: 120px;
         }
+        /* 後代選取器 */
+        /* .gallery img {} */
+        /* 子代選取器 */
+        /* .gallery > img {border: 2px solid red;} */
     </style>
 </head>
 <body>
@@ -36,7 +40,11 @@
         for(let thumb of thumbs){
             // console.log(thumb);
             thumb.onclick = function(){
-                console.log(this)
+                let t = this.getAttribute('src');
+                let IMG = document.querySelector('.gallery>img');
+                console.log(IMG);
+
+                IMG.setAttribute('src',t);
             }
         }
     </script>
