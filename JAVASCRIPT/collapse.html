@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .collapse {
+            max-width: 600px;
+            margin-inline: auto;
+        }
+        .collapse-btn {
+            display: block;
+            padding: 15px;
+            background-color: #098;
+            text-decoration: none;
+            color: #fff;
+
+            border-bottom: 2px solid #003630
+        }
+        .collapse-panel {
+            padding-inline: 15px;
+            /* padding-block: 15px; */
+            background-color: #9daaa9;
+
+            height:0;
+            overflow: hidden;
+
+            /* box-sizing: content-box; */
+        }
+        .collapse-panel.active {
+            height: fit-content;
+            padding-block: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="collapse">
+        <a href="#" class="collapse-btn">Link 1</a>
+        <div class="collapse-panel active">
+            <h3>title 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nisi accusamus quasi exercitationem ipsa alias! Optio vitae debitis suscipit, fugiat quae eligendi explicabo et, repellat ducimus, voluptatum cupiditate doloribus iste!
+            </p>
+        </div>
+        <a href="#" class="collapse-btn">Link 2</a>
+        <div class="collapse-panel">
+            <h3>title 2</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nisi accusamus quasi exercitationem ipsa alias! Optio vitae debitis suscipit, fugiat quae eligendi explicabo et, repellat ducimus, voluptatum cupiditate doloribus iste!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nisi accusamus quasi exercitationem ipsa alias! Optio vitae debitis suscipit, fugiat quae eligendi explicabo et, repellat ducimus, voluptatum cupiditate doloribus iste!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nisi accusamus quasi exercitationem ipsa alias! Optio vitae debitis suscipit, fugiat quae eligendi explicabo et, repellat ducimus, voluptatum cupiditate doloribus iste!
+            </p>
+        </div>
+        <a href="#" class="collapse-btn">Link 3</a>
+        <div class="collapse-panel">
+            <h3>title 3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nisi accusamus quasi exercitationem ipsa alias! Optio vitae debitis suscipit, fugiat quae eligendi explicabo et, repellat ducimus, voluptatum cupiditate doloribus iste!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nisi accusamus quasi exercitationem ipsa alias! Optio vitae debitis suscipit, fugiat quae eligendi explicabo et, repellat ducimus, voluptatum cupiditate doloribus iste!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
