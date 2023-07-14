@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #ccc;
+
+            padding: 30px;
+            border: 10px solid #000;
+
+            /* box-sizing: border-box; */
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, omnis maiores harum autem, quas laudantium saepe ratione quaerat sint aliquam modi error quos! Eum nostrum consectetur voluptatem eos? Distinctio, error.
+    </div>
+    <script>
+        let el = document.querySelector('.box');
+        console.log('clientWidth: ' + el.clientWidth); // width + padding
+        console.log('offsetWidth: ' + el.offsetWidth); // width + padding + border
+        console.log('scrollWidth: ' + el.scrollWidth); // width + padding + overflow
+        console.log('clientHeight: ' + el.clientHeight); // height + padding
+        console.log('offsetHeight: ' + el.offsetHeight); // height + padding + border
+        console.log('scrollHeight: ' + el.scrollHeight); // height + padding + overflow
+    </script>
+</body>
+</html>
