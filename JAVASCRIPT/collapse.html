@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         * {
             margin: 0;
@@ -15,7 +17,9 @@
             margin-inline: auto;
         }
         .collapse-btn {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             padding: 15px;
             background-color: #098;
             text-decoration: none;
@@ -26,6 +30,12 @@
         }
         .collapse-btn.active {
             background-color: #f79b32;
+        }
+        .collapse-btn i {
+            transition: all 300ms;
+        }
+        .collapse-btn.active i {
+            transform: rotate(180deg);
         }
         .collapse-panel {
             padding-inline: 15px;
@@ -44,14 +54,18 @@
 </head>
 <body>
     <div class="collapse">
-        <a href="#" class="collapse-btn">Link 1</a>
+        <a href="#" class="collapse-btn">Link 1
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
         <div class="collapse-panel">
             <h3>title 1</h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nisi accusamus quasi exercitationem ipsa alias! Optio vitae debitis suscipit, fugiat quae eligendi explicabo et, repellat ducimus, voluptatum cupiditate doloribus iste!
             </p>
         </div>
-        <a href="#" class="collapse-btn">Link 2</a>
+        <a href="#" class="collapse-btn">Link 2
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
         <div class="collapse-panel">
             <h3>title 2</h3>
             <p>
@@ -60,7 +74,9 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nisi accusamus quasi exercitationem ipsa alias! Optio vitae debitis suscipit, fugiat quae eligendi explicabo et, repellat ducimus, voluptatum cupiditate doloribus iste!
             </p>
         </div>
-        <a href="#" class="collapse-btn">Link 3</a>
+        <a href="#" class="collapse-btn">Link 3
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
         <div class="collapse-panel">
             <h3>title 3</h3>
             <p>
