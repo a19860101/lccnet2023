@@ -42,9 +42,9 @@
 <body>
     <div class="tabs">
         <div class="tab-nav">
-            <a href="#" class="tab-link active">Panel A</a>
-            <a href="#" class="tab-link">Panel B</a>
-            <a href="#" class="tab-link">Panel C</a>
+            <a href="#panel-a" class="tab-link active">Panel A</a>
+            <a href="#panel-b" class="tab-link">Panel B</a>
+            <a href="#panel-c" class="tab-link">Panel C</a>
         </div>
         <div class="tab-panel active" id="panel-a">
             <h3>title A</h3>
@@ -68,5 +68,20 @@
             </p>
         </div>
     </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        for(let tl of tabLinks){
+            tl.onclick = e => {
+                document.querySelector('.tab-link.active').classList.remove('active');
+                e.target.classList.add('active');
+                let href = e.target.getAttribute('href');
+                console.log(href);
+                // 找到目前顯示的panel並且移除active
+                document.querySelector('.tab-panel.active').classList.remove('active');
+                // 顯示點選的panel
+                document.querySelector(href).classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
