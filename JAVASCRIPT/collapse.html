@@ -35,12 +35,11 @@
             height:0;
             overflow: hidden;
             transition: all 600ms;
-            /* box-sizing: content-box; */
+            box-sizing: content-box;
         }
-        /* .collapse-panel.active {
-            height: fit-content;
-            padding-block: 15px;
-        } */
+        .collapse-panel.active {
+            padding-block: 30px;
+        }
     </style>
 </head>
 <body>
@@ -78,8 +77,10 @@
                 let panel = e.target.nextElementSibling;
                 if(panel.style.height){
                     panel.style.height = null;
+                    panel.classList.remove('active');
                 }else{
                     panel.style.height = panel.scrollHeight + 'px';
+                    panel.classList.add('active');
                 }
             }
         }
