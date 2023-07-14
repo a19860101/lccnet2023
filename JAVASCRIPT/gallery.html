@@ -39,11 +39,11 @@
         // console.log(thumbs)
         for(let thumb of thumbs){
             // console.log(thumb);
-            thumb.onclick = function(){
-                let t = this.getAttribute('src');
+            thumb.onclick = e => {
+                // console.log(e.target);
+                // console.log(this);
+                let t = e.target.getAttribute('src');
                 let IMG = document.querySelector('.gallery>img');
-                console.log(IMG);
-
                 IMG.setAttribute('src',t);
             }
         }
