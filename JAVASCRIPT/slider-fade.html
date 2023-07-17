@@ -66,37 +66,21 @@
         let next = document.querySelector('.slider-next');
 
         prev.onclick = function(){
-            // if(currentIndex === 0){
-            //     currentIndex = total - 1;
-            // }else {
-            //     currentIndex--;
-            // }
-            currentIndex = currentIndex === 0 ? total : currentIndex;
-            currentIndex = (currentIndex - 1) % total;
+            slider('prev');
             switchImage()
         }
         next.onclick = function(){
-            console.log('next');
-            // if(currentIndex === total - 1){
-            //     currentIndex = 0;
-            // }else{
-            //     currentIndex++;
-            // }
-            // currentIndex = currentIndex===total-1 ? 0 : currentIndex += 1;
-            // curentIndex += 1 => currentIndex = currentIndex + 1;
-            currentIndex = (currentIndex + 1) % total;
+            slider();
             switchImage()
         }
 
-        function slider(){
-            // currentIndex++;
-            // console.log(currentIndex);
-            if(currentIndex === total - 1){
-                currentIndex = 0;
+        function slider(direction){
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex - 1) % total;
             }else{
-                currentIndex++;
+                currentIndex = (currentIndex + 1) % total;
             }
-            console.log(currentIndex);
 
             switchImage()
         }
