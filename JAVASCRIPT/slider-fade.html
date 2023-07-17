@@ -46,6 +46,7 @@
             border-radius: 50%;
             background-color: #000;
             margin: 10px;
+            transition: all 300ms;
         }
         .slider-dot.active {
             background-color: #fa0;
@@ -82,7 +83,7 @@
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
         let currentIndex = 0;
-        let timeout = 10000;
+        let timeout = 3000;
         let prev = document.querySelector('.slider-prev');
         let next = document.querySelector('.slider-next');
 
@@ -104,12 +105,16 @@
             }else{
                 currentIndex = (currentIndex + 1) % total;
             }
-
+            switchDot();
             switchImage()
         }
         function switchImage(){
             document.querySelector('.slider-item.active').classList.remove('active');
             imgs[currentIndex].classList.add('active');
+        }
+        function switchDot(){
+            document.querySelector('.slider-dot.active').classList.remove('active');
+            dots[currentIndex].classList.add('active');
         }
         //計時器
         // setTimeout
@@ -129,6 +134,7 @@
             dot.onclick = function(){
                 currentIndex = this.dataset.idx;
                 switchImage();
+                switchDot()
                 clearInterval(timer);
                 timer = setInterval(slider, timeout);
             }
