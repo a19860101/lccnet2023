@@ -24,6 +24,13 @@
             opacity: 1;
             visibility: visible;
         }
+        .slider-nav {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
 </head>
 <body>
@@ -46,11 +53,24 @@
         <div class="slider-item">
             <img src="https://picsum.photos/id/52/1200/600" alt="">
         </div>
+        <div class="slider-nav">
+            <a href="#" class="slider-prev">Prev</a>
+            <a href="#" class="slider-next">Next</a>
+        </div>
     </div>
     <script>
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
         let currentIndex = 0;
+        let prev = document.querySelector('.slider-prev');
+        let next = document.querySelector('.slider-next');
+
+        prev.onclick = function(){
+            console.log('prev');
+        }
+        next.onclick = function(){
+            console.log('next');
+        }
 
         function slider(){
             // currentIndex++;
