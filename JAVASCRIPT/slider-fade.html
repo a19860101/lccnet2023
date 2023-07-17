@@ -66,10 +66,26 @@
         let next = document.querySelector('.slider-next');
 
         prev.onclick = function(){
-            console.log('prev');
+            // if(currentIndex === 0){
+            //     currentIndex = total - 1;
+            // }else {
+            //     currentIndex--;
+            // }
+            currentIndex = currentIndex === 0 ? total : currentIndex;
+            currentIndex = (currentIndex - 1) % total;
+            switchImage()
         }
         next.onclick = function(){
             console.log('next');
+            // if(currentIndex === total - 1){
+            //     currentIndex = 0;
+            // }else{
+            //     currentIndex++;
+            // }
+            // currentIndex = currentIndex===total-1 ? 0 : currentIndex += 1;
+            // curentIndex += 1 => currentIndex = currentIndex + 1;
+            currentIndex = (currentIndex + 1) % total;
+            switchImage()
         }
 
         function slider(){
@@ -91,7 +107,7 @@
         //計時器
         // setTimeout
         // setInterval
-        setInterval(slider,3000);
+        setInterval(slider,10000);
 
         
        
