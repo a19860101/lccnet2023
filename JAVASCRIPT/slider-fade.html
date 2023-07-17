@@ -31,6 +31,22 @@
             display: flex;
             justify-content: space-between;
         }
+        .slider-dots {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            transform: translateY(100%);
+            display: flex;
+            justify-content: center;
+            background-color: #ccc;
+        }
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #000;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -57,6 +73,7 @@
             <a href="#" class="slider-prev">Prev</a>
             <a href="#" class="slider-next">Next</a>
         </div>
+        <div class="slider-dots"></div>
     </div>
     <script>
         let imgs = document.querySelectorAll('.slider-item');
@@ -96,6 +113,13 @@
         // setInterval
         let timer = setInterval(slider,timeout);
 
+        //dots
+        for(let i=0;i<total;i++){
+            let dot = document.createElement('span');
+            dot.dataset.idx = i;
+            dot.classList.add('slider-dot');
+            document.querySelector('.slider-dots').append(dot);
+        }
         
        
     </script>
