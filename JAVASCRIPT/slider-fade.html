@@ -42,5 +42,27 @@
             <img src="https://picsum.photos/id/42/1200/600" alt="">
         </div>
     </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex = 0;
+
+        function slider(){
+            // currentIndex++;
+            // console.log(currentIndex);
+            if(currentIndex === total - 1){
+                currentIndex = 0;
+            }else{
+                currentIndex++;
+            }
+            console.log(currentIndex)
+        }
+
+        //計時器
+        // setTimeout
+        // setInterval
+        setInterval(slider,1000);
+       
+    </script>
 </body>
 </html>
