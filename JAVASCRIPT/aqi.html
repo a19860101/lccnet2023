@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <select name="" id="">
+            <option>--請選擇城市--</option>
+        </select>
+    </div>
+    <div class="container"></div>
+    <script>
+        let url = 'https://data.epa.gov.tw/api/v2/aqx_p_432?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=ImportDate%20desc&format=JSON';
+        fetch(url)
+        .then(res => res.json())
+        .then(result => {
+            let county = result.records.map(data=>data.county);
+            // let county = [...new Set(result.records.map(data=>data.county))];
+            // console.log(new Set(county));
+            // console.log(Array.from(new Set(county)));
+            // console.log([...new Set(county)]);
+            county = [...new Set(county)];
+            console.log(county);
+        })
+    </script>
+</body>
+</html>
