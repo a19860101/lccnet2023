@@ -7,7 +7,7 @@
 </head>
 <body>
     <div>
-        <select name="" id="">
+        <select name="" id="county">
             <option>--請選擇城市--</option>
         </select>
     </div>
@@ -24,6 +24,14 @@
             // console.log([...new Set(county)]);
             county = [...new Set(county)];
             console.log(county);
+
+            for(let c of county){
+                let opt = document.createElement('option');
+                opt.value = c;
+                opt.textContent = c;
+                opt.classList.add('county-item');
+                document.querySelector('#county').append(opt);
+            }
         })
     </script>
 </body>
