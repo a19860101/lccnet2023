@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            border: 1px solid #888;
+            padding: 15px;
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -35,8 +51,30 @@
 
             document.querySelector('#county').onchange = e => {
                 // console.log(e.target.value);
+                let container = document.querySelector('.container');
+                container.textContent = '';
                 let filterData = result.records.filter(data => data.county === e.target.value);
-                console.log(filterData);
+                for(let item of filterData){
+                    console.log(item);
+                    let box = document.createElement('div');
+                    box.classList.add('box');
+
+                    let aqi = document.createElement('div');
+                    aqi.classList.add('aqi');
+                    aqi.append('空氣品質api:'+item.aqi);
+
+                    let status = document.createElement('div');
+                    status.classList.add('status');
+                    status.append('空氣品質:'+item.status);
+
+                    let sitename = document.createElement('div');
+                    sitename.classList.add('sitename');
+                    sitename.append('測站名稱:'+item.sitename);
+
+                    box.append(sitename,aqi,status);
+
+                    container.append(box);
+                }
             }
         })
     </script>
