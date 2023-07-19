@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            width: 1200px;
+            height: 600px;
+            margin-inline: auto;
+            position: relative;
+
+            /* overflow-x: hidden; */
+        }
+        img {
+            display: block;
+        }
+        .slider-wrapper {
+            width: 7200px;
+            background-color: #098;
+            display: flex;
+        }
+        .slider-item {
+            width: 1200px;
+            /* height: 100%; */
+            /* float: left; */
+
+        }
+        .slider-item.active {
+        }
+        .slider-nav {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .slider-dots {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            transform: translateY(100%);
+            display: flex;
+            justify-content: center;
+            background-color: #ccc;
+        }
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #000;
+            margin: 10px;
+            transition: all 300ms;
+        }
+        .slider-dot.active {
+            background-color: #fa0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-wrapper">
+            <div class="slider-item active">
+                <img src="https://picsum.photos/id/82/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/12/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/22/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/32/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/42/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/52/1200/600" alt="">
+            </div>
+        </div>
+        <!-- <div class="slider-nav">
+            <a href="#" class="slider-prev">Prev</a>
+            <a href="#" class="slider-next">Next</a>
+        </div>
+        <div class="slider-dots"></div> -->
+    </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex = 0;
+        let timeout = 3000;
+        let prev = document.querySelector('.slider-prev');
+        let next = document.querySelector('.slider-next');
+
+        prev.onclick = function(){
+            slider('prev');
+            clearInterval(timer);
+            timer = setInterval(slider,timeout)
+        }
+        next.onclick = function(){
+            slider();
+            clearInterval(timer);
+            timer = setInterval(slider,timeout)
+        }
+
+        function slider(direction){
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex - 1) % total;
+            }else{
+                currentIndex = (currentIndex + 1) % total;
+            }
+            switchDot();
+            // switchImage()
+        }
+        function switchImage(){
+            document.querySelector('.slider-item.active').classList.remove('active');
+            imgs[currentIndex].classList.add('active');
+        }
+        function switchDot(){
+            document.querySelector('.slider-dot.active').classList.remove('active');
+            dots[currentIndex].classList.add('active');
+        }
+        //計時器
+        // setTimeout
+        // setInterval
+        let timer = setInterval(slider,timeout);
+
+        //dots
+        for(let i=0;i<total;i++){
+            let dot = document.createElement('span');
+            dot.dataset.idx = i;
+            dot.classList.add('slider-dot');
+            document.querySelector('.slider-dots').append(dot);
+        }
+        let dots = document.querySelectorAll('.slider-dot');
+        dots[0].classList.add('active');
+        for(let dot of dots){
+            dot.onclick = function(){
+                currentIndex = Number(this.dataset.idx);
+                switchImage();
+                switchDot()
+                clearInterval(timer);
+                timer = setInterval(slider, timeout);
+            }
+        }
+       
+    </script>
+</body>
+</html>
