@@ -132,7 +132,7 @@
         dots[0].classList.add('active');
         for(let dot of dots){
             dot.onclick = function(){
-                currentIndex = this.dataset.idx;
+                currentIndex = Number(this.dataset.idx);
                 switchImage();
                 switchDot()
                 clearInterval(timer);
