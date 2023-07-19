@@ -1,0 +1,17 @@
+{
+    "title":"json資料",
+    "content":[
+        {
+            "name":"紅茶",
+            "price": "30"
+        },
+        {
+            "name":"綠茶",
+            "price": "30"
+        },
+        {
+            "name":"奶茶",
+            "price": "40"
+        }
+    ]
+}
