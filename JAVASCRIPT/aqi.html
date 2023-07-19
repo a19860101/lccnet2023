@@ -32,6 +32,12 @@
                 opt.classList.add('county-item');
                 document.querySelector('#county').append(opt);
             }
+
+            document.querySelector('#county').onchange = e => {
+                // console.log(e.target.value);
+                let filterData = result.records.filter(data => data.county === e.target.value);
+                console.log(filterData);
+            }
         })
     </script>
 </body>
