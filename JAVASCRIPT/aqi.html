@@ -9,15 +9,21 @@
             box-sizing: border-box;
         }
         .container {
-            width: 1200px;
+            max-width: 1200px;
+            padding-inline: 15px;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
+            gap: 15px;
         }
         .box {
             border: 1px solid #888;
             padding: 15px;
-            width: 300px;
+            flex:1 0 300px;
+            border-radius: 8px;
+        }
+        .box > * {
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -61,11 +67,11 @@
 
                     let aqi = document.createElement('div');
                     aqi.classList.add('aqi');
-                    aqi.append('空氣品質api:'+item.aqi);
+                    aqi.append('空氣品質指標:'+item.aqi);
 
                     let status = document.createElement('div');
                     status.classList.add('status');
-                    status.append('空氣品質:'+item.status);
+                    status.append('空氣品質狀態:'+item.status);
 
                     let sitename = document.createElement('div');
                     sitename.classList.add('sitename');
