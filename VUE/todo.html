@@ -11,7 +11,7 @@
     <div id="app">
         <form action="">
             <input type="text" v-model="input">
-            <input type="submit" value="新增事項" v-on:click="test()">
+            <input type="submit" value="新增事項" @click.prevent="store()">
         </form>
         <ul>
             <li v-for="todo in todos">{{todo}}</li>
@@ -26,8 +26,9 @@
                 }
             },
             methods:{
-                test(){
-                    alert(this.input);
+                store(){
+                    this.todos.push(this.input);
+                    this.input = '';
                 }
             }
         }).mount('#app')
