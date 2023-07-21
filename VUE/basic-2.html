@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <label for="">姓名</label>
+            <input type="text" v-model="name">
+            <div>
+                <label for="hobby">興趣</label>
+    
+                <input type="checkbox" id="design" v-model="hobby" name="hobby" value="設計">
+                <label for="design">設計</label>
+                <input type="checkbox" id="web" v-model="hobby" name="hobby" value="網頁設計">
+                <label for="web">網頁設計</label>
+                <input type="checkbox" id="clip" v-model="hobby" name="hobby" value="影片剪輯">
+                <label for="clip">影片剪輯</label>
+            </div>
+        </form>
+        <div>{{hobby}}</div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    name:'',
+                    hobby:['test']
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
