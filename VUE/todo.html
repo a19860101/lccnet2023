@@ -18,7 +18,10 @@
         </ul>
     </div>
     <script>
-        Vue.createApp({
+
+        const {createApp} = Vue;
+
+        createApp({
             data(){
                 return {
                     input:'',
@@ -31,7 +34,28 @@
                     this.input = '';
                 }
             }
-        }).mount('#app')
+        }).mount('#app');
+
+        const obj = {
+            a:'asdf',
+            b(){
+                return 'hello';
+            }
+        }
+
+        console.log(obj.b());
+
+        // 解構賦值
+        const user = {
+            name:'john',
+            mail:'asdf@gmail.com',
+            gender:'male'
+        }
+        // 物件解構
+        const {name,mail} = user;
+        console.log(name,mail);
+        console.log(user.name,user.mail)
+
     </script>
 </body>
 </html>
