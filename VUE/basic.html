@@ -12,6 +12,15 @@
         <ul>
             <li v-for="(drink, index) of drinks">{{index}}-{{drink.name}}-NT.{{drink.price}}</li>
         </ul>
+        <!-- <div>
+            <div v-if="qty > 5">庫存充足</div>
+            <div v-else-if="qty > 0">低庫存</div>
+            <div v-else>補貨中</div>
+        </div> -->
+        <div>
+            <div v-if="qty > 5">庫存充足</div>
+            <div v-show="qty > 5">庫存充足</div>
+        </div>
         <a v-bind:href="link">Yahoo</a>
         <a :href="link">Yahoo</a>
     </div>
@@ -26,6 +35,7 @@
                 return {
                     title:'Hello VUE',
                     link:'https://tw.yahoo.com',
+                    qty:0,
                     // drinks:['紅茶','綠茶','奶茶','拿鐵']
                     drinks:[
                         {
