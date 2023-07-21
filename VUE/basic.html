@@ -12,6 +12,8 @@
         <ul>
             <li v-for="(drink, index) of drinks">{{index}}-{{drink.name}}-NT.{{drink.price}}</li>
         </ul>
+        <a v-bind:href="link">Yahoo</a>
+        <a :href="link">Yahoo</a>
     </div>
 
 
@@ -23,6 +25,7 @@
             data(){
                 return {
                     title:'Hello VUE',
+                    link:'https://tw.yahoo.com',
                     // drinks:['紅茶','綠茶','奶茶','拿鐵']
                     drinks:[
                         {
