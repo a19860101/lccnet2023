@@ -7,27 +7,45 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app">{{ message }}
-        <div>{{price}}</div>
-        <h1 class="title">{{title}}</h1>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <ul>
+            <li v-for="(drink, index) of drinks">{{index}}-{{drink.name}}-NT.{{drink.price}}</li>
+        </ul>
     </div>
-    <div class="container">
 
-    </div>
 
     <script>
-        let h1 = document.createElement('h1');
-        h1.append('hello vue');
-        h1.classList.add('title');
-        document.querySelector('.container').append(h1);
+
         // const { createApp } = Vue //解構
 
         Vue.createApp({
             data(){
                 return {
-                    title:'hello vue',
-                    price:'9999 ',
-                    message:'hello'
+                    title:'Hello VUE',
+                    // drinks:['紅茶','綠茶','奶茶','拿鐵']
+                    drinks:[
+                        {
+                            id:1,
+                            name:'熟成紅茶',
+                            price: 30
+                        },
+                        {
+                            id:2,
+                            name:'熟成歐蕾',
+                            price: 50
+                        },
+                        {
+                            id:3,
+                            name:'春芽綠茶',
+                            price: 30
+                        },
+                        {
+                            id:4,
+                            name:'春芽冷露',
+                            price: 45
+                        },
+                    ]
                 }
             }
         }).mount('#app');
