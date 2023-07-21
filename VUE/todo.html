@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <input type="text" v-model="input">
+            <input type="submit" value="新增事項" v-on:click="test()">
+        </form>
+        <ul>
+            <li v-for="todo in todos">{{todo}}</li>
+        </ul>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    input:'',
+                    todos:['寫作業']
+                }
+            },
+            methods:{
+                test(){
+                    alert(this.input);
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
