@@ -16,16 +16,16 @@
         </form>
         <h3>未完成</h3>
         <ul>
-            <li v-for="todo in todoUnCompleted">
+            <li v-for="todo,idx in todoUnCompleted" :key="todo.id">
                 <input type="checkbox" v-model="todo.isCompleted">
-                {{todo.title}}
+                {{todo.title}} -- {{idx}}
             </li>
         </ul>
         <h3>已完成</h3>
         <ul>
-            <li v-for="todo in todoCompleted">
+            <li v-for="todo,idx in todoCompleted" :key="todo.id">
                 <input type="checkbox" v-model="todo.isCompleted">
-                {{todo.title}}
+                {{todo.title}} -- {{idx}}
             </li>
         </ul>
 
