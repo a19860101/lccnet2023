@@ -9,6 +9,7 @@
 </head>
 <body>
     <div id="app">
+        <div>{{test}}</div>
         <form action="">
             <input type="text" v-model="input">
             <input type="submit" value="新增事項" @click.prevent="store()">
@@ -19,6 +20,14 @@
                 {{todo.title}}
             </li>
         </ul>
+        <div>
+            <h3>完成</h3>
+            {{todoCompleted}}
+        </div>
+        <div>
+            <h3>未完成</h3>
+            {{todoUnCompleted}}
+        </div>
     </div>
     <script>
 
@@ -50,6 +59,14 @@
                         isCompleted: false
                     });
                     this.input = '';
+                }
+            },
+            computed:{
+                todoCompleted(){
+                    return this.todos.filter(data=>data.isCompleted === true);
+                },
+                todoUnCompleted(){
+                    return this.todos.filter(data=>data.isCompleted != true);
                 }
             }
         }).mount('#app');
