@@ -59,10 +59,11 @@
                 <div v-for="(cart,idx) in carts">
                     <h3>{{cart.title}}</h3>
                     <div>{{cart.price}}</div>
-                    <button class="btn btn-danger btn-sm">移除</button>
+                    <button class="btn btn-danger btn-sm" @click="removeCartItem(idx)">移除</button>
+                    <button class="btn btn-danger btn-sm" @click="removeCartItem2(cart.id)">移除</button>
                 </div>
                 <hr>
-                <button class="btn btn-outline-danger btn-sm">清空購物車</button>
+                <button class="btn btn-outline-danger btn-sm" @click="clearCart()">清空購物車</button>
             </div>
         </div>
         <div class="container py-5">
@@ -99,6 +100,18 @@
                 storeToCart2(pid){
                     let pd = this.products.find(p=>p.id === pid);
                     this.carts.push(pd);
+                },
+                clearCart(){
+                    if(confirm('確認清空購物車？')){
+                        this.carts.length = 0;
+                    }
+                },
+                removeCartItem(idx){
+                    this.carts.splice(idx,1);
+                    // this.carts = this.carts.filter((data,i) => i != idx);
+                },
+                removeCartItem2(cid){
+                    this.carts = this.carts.filter(data => data.id != cid);
                 }
             }
         }).mount('#app')
