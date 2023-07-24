@@ -14,7 +14,10 @@
             <input type="submit" value="新增事項" @click.prevent="store()">
         </form>
         <ul>
-            <li v-for="todo in todos">{{todo}}</li>
+            <li v-for="todo in todos">
+                <input type="checkbox" v-model="todo.isCompleted">
+                {{todo.title}}
+            </li>
         </ul>
     </div>
     <script>
@@ -25,12 +28,27 @@
             data(){
                 return {
                     input:'',
-                    todos:['寫作業']
+                    todos:[
+                        {
+                            id:1,
+                            title: '寫作業',
+                            isCompleted: false,
+                        },
+                        {
+                            id:2,
+                            title: '洗衣服',
+                            isCompleted: true,
+                        }
+                    ]
                 }
             },
             methods:{
                 store(){
-                    this.todos.push(this.input);
+                    this.todos.push({
+                        id:Date.now(),
+                        title: this.input,
+                        isCompleted: false
+                    });
                     this.input = '';
                 }
             }
