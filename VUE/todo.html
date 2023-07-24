@@ -14,20 +14,21 @@
             <input type="text" v-model="input">
             <input type="submit" value="新增事項" @click.prevent="store()">
         </form>
+        <h3>未完成</h3>
         <ul>
-            <li v-for="todo in todos">
+            <li v-for="todo in todoUnCompleted">
                 <input type="checkbox" v-model="todo.isCompleted">
                 {{todo.title}}
             </li>
         </ul>
-        <div>
-            <h3>完成</h3>
-            {{todoCompleted}}
-        </div>
-        <div>
-            <h3>未完成</h3>
-            {{todoUnCompleted}}
-        </div>
+        <h3>已完成</h3>
+        <ul>
+            <li v-for="todo in todoCompleted">
+                <input type="checkbox" v-model="todo.isCompleted">
+                {{todo.title}}
+            </li>
+        </ul>
+
     </div>
     <script>
 
