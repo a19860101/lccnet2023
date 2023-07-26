@@ -64,6 +64,7 @@
                 </div>
                 <hr>
                 <div v-if="carts.length === 0">購物車內沒有商品，快去選購</div>
+                <div>總金額:{{total}}</div>
                 <button class="btn btn-outline-danger btn-sm" @click="clearCart()" v-if="carts.length > 0">清空購物車</button>
             </div>
         </div>
@@ -113,6 +114,23 @@
                 },
                 removeCartItem2(cid){
                     this.carts = this.carts.filter(data => data.id != cid);
+                }
+            },
+            computed:{
+                price(){
+                    if(this.carts.length > 0){
+                        return this.carts.map(data=>data.price);
+                    }else{
+                        return [0];
+                    }
+                },
+                total(){
+                    // return this.price.reduce((x,y)=>Number(x)+Number(y));
+                    if(this.carts.length > 0){
+                        return this.carts.map(data=>data.price).reduce((x,y)=>Number(x)+Number(y));
+                    }else{
+                        return 0;
+                    }
                 }
             }
         }).mount('#app')
