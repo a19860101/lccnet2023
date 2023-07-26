@@ -22,6 +22,9 @@
             <div>今日溫度：{{temp}}</div>
             <div>{{desc}}</div>
             <div>體感溫度：{{feels}}</div>
+            <div style="background:#ccc">
+                <img :src="icon" alt="">
+            </div>
         </div>
     </div>
     <script>
@@ -41,6 +44,11 @@
                 },
                 feels(){
                     return this.weather.main.feels_like;
+                },
+                icon(){
+                    let icon = this.weather.weather[0].icon;
+                    let url = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+                    return url;
                 }
             },
             methods:{
