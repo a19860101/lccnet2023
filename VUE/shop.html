@@ -60,10 +60,11 @@
                     <h3>{{cart.title}}</h3>
                     <div>{{cart.price}}</div>
                     <button class="btn btn-danger btn-sm" @click="removeCartItem(idx)">移除</button>
-                    <button class="btn btn-danger btn-sm" @click="removeCartItem2(cart.id)">移除</button>
+                    <!-- <button class="btn btn-danger btn-sm" @click="removeCartItem2(cart.id)">移除</button> -->
                 </div>
                 <hr>
-                <button class="btn btn-outline-danger btn-sm" @click="clearCart()">清空購物車</button>
+                <div v-if="carts.length === 0">購物車內沒有商品，快去選購</div>
+                <button class="btn btn-outline-danger btn-sm" @click="clearCart()" v-if="carts.length > 0">清空購物車</button>
             </div>
         </div>
         <div class="container py-5">
@@ -99,7 +100,7 @@
                 },
                 storeToCart2(pid){
                     let pd = this.products.find(p=>p.id === pid);
-                    this.carts.push(pd);
+                    this.carts.push(pd);    
                 },
                 clearCart(){
                     if(confirm('確認清空購物車？')){
