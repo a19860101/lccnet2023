@@ -9,12 +9,9 @@
 </head>
 <body>
     <div id="app">
-        <app-title></app-title>
-        <app-title></app-title>
-        <app-title></app-title>
-        <app-title></app-title>
-        <app-title></app-title>
-        <app-button></app-button>
+        <app-title>hello vuevuevue</app-title>
+        <app-button>click</app-button>
+        <app-button>link</app-button>
     </div>
     <script>
         let app = Vue.createApp({
@@ -24,10 +21,20 @@
         });
         
         app.component('app-title',{
-            template:`<h1>hello VUE!!!</h1>`
+            template:`<h1 :data-text="title"><slot /></h1>`,
+            data(){
+                return {
+                    title:'hello vue'
+                }
+            }
         });
         app.component('app-button',{
-            template:`<button>CLICK</button>`
+            template:`<button><slot /></button>`,
+            data(){
+                return {
+                    text:'click'
+                }
+            }
         });
 
         app.mount('#app');
