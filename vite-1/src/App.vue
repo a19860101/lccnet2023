@@ -1,7 +1,19 @@
 <template>
-  <h1>hello vite</h1>
+ <Nav />
 </template>
 <script>
+  import Nav from './components/Nav.vue';
+
+  export default {
+    data(){
+      return {
+
+      }
+    },
+    components:{
+      Nav,
+    }
+  }
 </script>
 <style>
 * {
