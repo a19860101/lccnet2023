@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 </head>
 <body>
     <div id="app">
         <app-title></app-title>
-        <app-btn></app-btn>
+        <app-btn>asdf</app-btn>
     </div>
     <script type="module">
         import AppTitle from './js/AppTitle.js';
         import AppBtn from './js/AppBtn.js';
+        import Test from './js/Test.js';
+        console.log(Test());
         Vue.createApp({
             data(){
                 return {
@@ -21,7 +24,8 @@
                 }
             },
             components:{
-                'app-title':AppTitle,
+                // 'app-title':AppTitle,
+                'AppTitle':AppTitle,
                 'app-btn':AppBtn,
             }
         }).mount('#app');
