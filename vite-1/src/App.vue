@@ -1,4 +1,5 @@
 <template>
+  <h1>hello</h1>
  <Nav />
 </template>
 <script>
@@ -15,13 +16,13 @@
     }
   }
 </script>
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 h1 {
-  color: #987;
+  color: #fa0;
 }
 </style>

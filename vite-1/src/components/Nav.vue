@@ -9,9 +9,10 @@
             <a href="#" class="nav-link">Link</a>
         </div>
     </nav>
+    <h1 class="text-rose-700 text-4xl">nav</h1>
 </template>
-<style>
-    nav {
+<style scoped>
+    /* nav {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -23,5 +24,8 @@
         color: #fff;
         text-decoration: none;
     }
+    h1 {
+        color:blue;
+    } */
     
 </style>
