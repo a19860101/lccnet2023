@@ -7,7 +7,8 @@ export default {
         }
     },
     components:{
-        'Btn':Btn
+        // 'Btn':Btn
+        Btn
     },
     methods:{},
     computed:{}
