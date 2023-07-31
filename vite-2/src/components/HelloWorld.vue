@@ -1,40 +1,21 @@
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-  msg: String,
-})
-
-const count = ref(0)
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
-
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <div>
+    <a href="#" @click="currentPanel = 'P1'">panel 1</a>
+    <a href="#" @click="currentPanel = 'P2'">panel 2</a>
+    <a href="#" @click="currentPanel = 'P3'">panel 3</a>
+    <component :is="currentPanel"></component>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
+<script>
+  import P1 from '@/components/P1.vue'
+  import P2 from '@/components/P2.vue'
+  import P3 from '@/components/P3.vue'
+  export default {
+    data(){
+      return {
+        currentPanel: 'P1'
+      }
+    },
+    components:{P1,P2,P3}
+  }
+</script>
