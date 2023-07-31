@@ -3,7 +3,9 @@
 
     <h1>Vue</h1>
     <Nav></Nav>
-    <router-view></router-view>
+    <Transition>
+      <router-view></router-view>
+    </Transition>
     <hr>
     <HelloWorld></HelloWorld>
   </div>
@@ -20,4 +22,16 @@
     }
   }
 </script>
-<style></style>
+<style>
+    .v-enter-active,
+    .v-leave-active {
+  transition: 0.5s;
+}
+
+.v-enter-from,
+.v-leave-to {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px);
+}
+</style>

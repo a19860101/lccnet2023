@@ -3,7 +3,9 @@
     <a href="#" @click="currentPanel = 'P1'">panel 1</a>
     <a href="#" @click="currentPanel = 'P2'">panel 2</a>
     <a href="#" @click="currentPanel = 'P3'">panel 3</a>
-    <component :is="currentPanel"></component>
+    <Transition>
+      <component :is="currentPanel"></component>
+    </Transition>
   </div>
 </template>
 <script>
@@ -19,3 +21,16 @@
     components:{P1,P2,P3}
   }
 </script>
+<style>
+  .v-enter-active,
+.v-leave-active {
+  transition: 0.5s;
+}
+
+.v-enter-from,
+.v-leave-to {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px);
+}
+</style>
