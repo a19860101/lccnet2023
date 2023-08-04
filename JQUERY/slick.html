@@ -16,6 +16,16 @@
             width: 1200px;
             margin-inline: auto;
         }
+        img {
+            width: 100%;
+        }
+        .slick-slide {
+            /* opacity: .6; */
+            margin-inline: 15px;
+        }
+        .slick-current {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -39,12 +49,14 @@
     <script>
         $(function(){
             $('.slider').slick({
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 5000,
                 speed:1500,
                 dots: true,
                 arrows: true,
-                pauseOnHover: false
+                pauseOnHover: false,
+                centerMode: true,
+                centerPadding: '100px'
             });
         })
     </script>
