@@ -19,6 +19,13 @@
             background-color: #ccc;
             padding: 10px;
             border-bottom: 1px solid #999;
+            transition: 400ms;
+        }
+        h2:hover {
+            background-color: #f4ca22;
+        }
+        h2.active {
+            background-color: #f4ca22;
         }
         .panel {
             padding: 10px;
@@ -32,6 +39,7 @@
                 // $(this).next().toggle(400);
                 // $(this).next().fadeToggle();
                 $(this).next().slideToggle();
+                $(this).toggleClass('active')
             })
         })
     </script>
