@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <style>
         body {
             background-color: #f47171;
@@ -19,30 +19,17 @@
         img {
             width: 100%;
         }
-        .slick-slide {
-            /* opacity: .6; */
-            /* margin-inline: 15px; */
-            transition: opacity 600ms;
-
-        }
-        .slick-center {
-            opacity:1;
-        }
-        .slick-next:before, .slick-prev:before {
-            color: #000;
-        }
+        
 
         .products {
             max-width: 1200px;
             margin-inline: auto;
         }
-        .products .slick-slide {
-            margin-inline: 15px;
-        }
+      
     </style>
 </head>
 <body>
-    <div class="slider">
+    <div class="slider owl-carousel owl-theme">
         <div class="slider-item">
             <img src="https://picsum.photos/id/34/1200/600" alt="">
         </div>
@@ -59,7 +46,7 @@
             <img src="https://picsum.photos/id/54/1200/600" alt="">
         </div>
     </div>
-    <div class="products">
+    <div class="products owl-carousel owl-theme">
         <div class="slider-item">
             <img src="https://picsum.photos/id/34/600" alt="">
         </div>
@@ -93,40 +80,13 @@
     </div>
     <script>
         $(function(){
-            $('.slider').slick({
-                autoplay: false,
-                autoplaySpeed: 5000,
-                speed:500,
-                dots: true,
-                arrows: true,
-                pauseOnHover: false,
-                centerMode: true,
-                centerPadding: '100px',
-                
-            });
-            $('.products').slick({
-                centerMode: true,
-                slidesToShow:4,
-                slidesToScroll: 1,
-                dots: true,
-                arrows: true,
-                responsive:[
-                    {
-                        breakpoint: 1200,
-                        settings:{
-                            slidesToShow:4,
-                            dots: false,
-                            arrows: false
-                        }
-                    },{
-                        breakpoint: 600,
-                        settings:{
-                            slidesToShow:2,
-                            arrows: false,
-                            dots: true
-                        }
-                    }
-                ]
+            $('.slider').owlCarousel({
+                items:1,
+                autoplay: true
+            })
+            $('.products').owlCarousel({
+                items: 5,
+                margin: 20,
             })
         })
     </script>
