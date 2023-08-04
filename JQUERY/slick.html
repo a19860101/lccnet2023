@@ -20,20 +20,20 @@
             width: 100%;
         }
         .slick-slide {
-            opacity: .6;
+            /* opacity: .6; */
             /* margin-inline: 15px; */
-            transition: opacity 300ms;
+            transition: opacity 600ms;
 
         }
-        .slick-active {
-            opacity: 1;
+        .slick-center {
+            opacity:1;
         }
         .slick-next:before, .slick-prev:before {
             color: #000;
         }
 
         .products {
-            width: 1200px;
+            max-width: 1200px;
             margin-inline: auto;
         }
         .products .slick-slide {
@@ -106,7 +106,26 @@
             });
             $('.products').slick({
                 slidesToShow:5,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                responsive:[
+                    {
+                        breakpoint: 1200,
+                        settings:{
+                            slidesToShow:4,
+                            dots: false,
+                            arrows: false
+                        }
+                    },{
+                        breakpoint: 600,
+                        settings:{
+                            slidesToShow:2,
+                            arrows: false,
+                            dots: true
+                        }
+                    }
+                ]
             })
         })
     </script>
