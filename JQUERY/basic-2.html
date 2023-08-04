@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        p {
+            transition: 300ms;
+        }
+        p.active {
+            background-color: #ccc;
+            color: #098;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.add').click(function(){
+                // $('p').hide();
+                // $('p').show();
+                $('p').addClass('active');
+            });
+            $('.remove').click(function(){
+                $('p').removeClass('active');
+            })
+            $('.toggle').click(function(){
+                $('p').toggleClass('active');
+            })
+        })
+    </script>
+</head>
+<body>
+    <button class="add">add</button>
+    <button class="remove">remove</button>
+    <button class="toggle">toggle</button>
+    <h2>title</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia recusandae laudantium fuga tempore est asperiores voluptate possimus vero culpa praesentium laboriosam numquam atque iste tenetur quasi eveniet quas, distinctio nostrum.
+    </p>
+</body>
+</html>
