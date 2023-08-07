@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
             background-color: #f47171;
@@ -26,14 +27,19 @@
             margin-inline: auto;
         }
       
-        .owl-item .slider-item {
+        .products .owl-item .slider-item {
             opacity: .2;
             transform: scale(.7);
             transition: 600ms;
         }
-        .center .slider-item {
+        .products .center .slider-item {
             opacity: 1;
             transform: scale(1);
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            /* background: transparent; */
+            background: initial;
+            color: yellow;
         }
     </style>
 </head>
@@ -91,7 +97,10 @@
         $(function(){
             $('.slider').owlCarousel({
                 items:1,
-                autoplay: true
+                autoplay: true,
+                dots: false,
+                nav: true,
+                navText: ['<i class="fa-solid fa-caret-left fa-2x"></i>','<i class="fa-solid fa-caret-right fa-2x"></i>']
             })
             $('.products').owlCarousel({
                 items:6,
