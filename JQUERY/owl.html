@@ -14,7 +14,7 @@
             background-color: #f47171;
         }
         .slider {
-            width: 1200px;
+            max-width: 1200px;
             margin-inline: auto;
         }
         img {
@@ -27,10 +27,13 @@
             margin-inline: auto;
         }
       
-        .products .owl-item .slider-item {
-            opacity: .2;
-            transform: scale(.7);
-            transition: 600ms;
+        
+        @media(min-width: 600px){
+            .products .owl-item .slider-item {
+                opacity: .2;
+                transform: scale(.7);
+                transition: 600ms;
+            }
         }
         .products .center .slider-item {
             opacity: 1;
@@ -111,9 +114,27 @@
             $('.products').owlCarousel({
                 items:6,
                 margin: 0,
-                center: true,
                 loop: true,
-                nav: true
+                responsive:{
+                    0:{
+                        items:2,
+                        nav: true,
+                        center: false,
+                        dots: false,
+                    },
+                    600:{
+                        items:4,
+                        nav: false,
+                        dots: true,
+                        center: true,
+                    },
+                    1200:{
+                        items: 6,
+                        nav: false,
+                        dots: true,
+                        center: true,
+                    }
+                }
             })
         })
     </script>
