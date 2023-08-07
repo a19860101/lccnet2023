@@ -13,7 +13,7 @@
 </head>
 <body>
     <nav>
-        <a href="#" class="nav-logo">LOGO</a>
+        <a href="#" class="nav-logo wow bounce" data-wow-iteration="infinite">LOGO</a>
         <div class="nav-menu">
             <a href="#course" class="nav-link">課程</a>
             <a href="#people" class="nav-link">專訪</a>
@@ -28,7 +28,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-12">
-                    <div class="course-card wow fadeInUp" data-wow-delay="0">
+                    <div class="course-card wow fadeInUp" data-wow-offset="150" data-wow-delay="0">
                         <div class="cover">
                             <img src="https://picsum.photos/id/34/500/" alt="">
                             <div class="cover-badge">立即上課</div>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12">
-                    <div class="course-card wow fadeInUp"  data-wow-delay="0.4s">
+                    <div class="course-card wow fadeInUp" data-wow-offset="150"  data-wow-delay="0.4s">
                         <div class="cover">
                             <img src="https://picsum.photos/id/34/500/" alt="">
                             <div class="cover-badge">立即上課</div>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12">
-                    <div class="course-card wow fadeInUp" data-wow-delay="0.8s" >
+                    <div class="course-card wow fadeInUp" data-wow-offset="150" data-wow-delay="0.8s" >
                         <div class="cover">
                             <img src="https://picsum.photos/id/34/500/" alt="">
                             <div class="cover-badge">立即上課</div>
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12">
-                    <div class="course-card wow fadeInUp" data-wow-delay="1.2s">
+                    <div class="course-card wow fadeInUp" data-wow-offset="150" data-wow-delay="1.2s">
                         <div class="cover">
                             <img src="https://picsum.photos/id/34/500/" alt="">
                             <div class="cover-badge">立即上課</div>
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12">
-                    <div class="course-card wow fadeInUp" >
+                    <div class="course-card wow fadeInUp" data-wow-offset="150" >
                         <div class="cover">
                             <img src="https://picsum.photos/id/34/500/" alt="">
                             <div class="cover-badge">立即上課</div>
@@ -148,7 +148,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12">
-                    <div class="course-card wow fadeInUp" >
+                    <div class="course-card wow fadeInUp" data-wow-offset="150" >
                         <div class="cover">
                             <img src="https://picsum.photos/id/34/500/" alt="">
                             <div class="cover-badge">立即上課</div>
@@ -172,7 +172,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12">
-                    <div class="course-card wow fadeInUp" >
+                    <div class="course-card wow fadeInUp" data-wow-offset="150" >
                         <div class="cover">
                             <img src="https://picsum.photos/id/34/500/" alt="">
                             <div class="cover-badge">立即上課</div>
@@ -196,7 +196,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12">
-                    <div class="course-card wow fadeInUp" >
+                    <div class="course-card wow fadeInUp" data-wow-offset="150" >
                         <div class="cover">
                             <img src="https://picsum.photos/id/34/500/" alt="">
                             <div class="cover-badge">立即上課</div>
@@ -226,7 +226,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-three">
-                    <div class="people-card">
+                    <div class="people-card wow fadeIn">
                         <div class="people-cover">
                             <img src="https://picsum.photos/id/22/800/600" alt="">
                         </div>
@@ -243,7 +243,7 @@
                     </div>
                 </div>
                 <div class="col-three">
-                    <div class="people-card">
+                    <div class="people-card wow fadeIn">
                         <div class="people-cover">
                             <img src="https://picsum.photos/id/22/800/600" alt="">
                         </div>
@@ -260,7 +260,7 @@
                     </div>
                 </div>
                 <div class="col-three">
-                    <div class="people-card">
+                    <div class="people-card wow fadeIn">
                         <div class="people-cover">
                             <img src="https://picsum.photos/id/21/800/500" alt="">
                         </div>
@@ -291,7 +291,10 @@
         </div>
     </footer>
     <script>
-        new WOW().init();
+        wow = new WOW({
+            offset: 150
+        })
+        wow.init();
     </script>
 </body>
 </html>
