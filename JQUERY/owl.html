@@ -98,8 +98,14 @@
             $('.slider').owlCarousel({
                 items:1,
                 autoplay: true,
-                dots: false,
+                autoplayTimeout: 6000,
+                autoplaySpeed: 2000,
+                navSpeed:2000,
+                dotsSpeed: 2000,
+                stagePadding: 70,
+                dots: true,
                 nav: true,
+                loop: true,
                 navText: ['<i class="fa-solid fa-caret-left fa-2x"></i>','<i class="fa-solid fa-caret-right fa-2x"></i>']
             })
             $('.products').owlCarousel({
